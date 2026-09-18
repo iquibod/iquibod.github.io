@@ -5,548 +5,646 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ivan G. Quibod - Resume</title>
 <style>
-  :root {
-    --blue: #45a5d8;
-    --text: #222;
-    --muted: #555;
-    --page-width: 8.27in;
-  }
+        :root {
+            --blue: #45a5d8;
+            --text: #222;
+            --muted: #555;
+            --page-width: 8.27in;
+        }
 
-  * { box-sizing: border-box; }
-  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
-   .descriptions{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-  }
+        * { box-sizing: border-box; }
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+        .descriptions{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #333;
+            padding: 30px 20px;
+        }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    .section-title {
-    font-family: 'Aptos', sans-serif;
-    font-weight: 700;
-    }   
-  .descriptions .name{
-    font-family: 'Aptos', 'Segoe UI', sans-serif;
-    text-transform: uppercase;
-    margin: 0;
-    letter-spacing: 2px;
-  }
-  .descriptions .position {
-    margin: 0;
-    font-family: 'Aptos', 'Segoe UI', sans-serif;
-    text-transform: uppercase;
-    font-weight: 900;
-    font-size: 18px;
-    margin-bottom: 5px;
-    letter-spacing: 2px;
-}
-  body {
-    margin: 0;
-    background: #e9e9e9;
-    font-family: 'Lato', sans-serif;
-    color: var(--text);
-    font-family: system-ui;
-  }
+        h1,
+        h2,
+        h3,
+        h4,
+        .section-title {
+        font-family: 'Aptos', sans-serif;
+        font-weight: 700;
+        }
 
-  .page {
-    width: var(--page-width);
-    min-height: 11.69in;
-    margin: 24px auto;
-    padding: 34px 38px 40px;
-    background: #fff;
-    box-shadow: 0 0 12px rgba(0,0,0,.14);
-  }
+            
+        body {
+            margin: 0;
+            background: #e9e9e9;
+            font-family: 'Lato', sans-serif;
+            color: var(--text);
+            font-family: system-ui;
+        }
+        :root{
+            --timeline-heading-color: #fff;
+        }
+        a{
+            text-underline-offset: 2px;
+            color: #000;
+        }
+        .timeline-section{
+            --timeline-color: #f5b91e;
+            --timeline-width: 2px;
+            --timeline-x: 16px;
+        }
+        main{
+            display: flex;
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            min-height: 11.69in;
+            margin: 24px auto;
+            padding: 0;
+            background: #fff;
+            box-shadow: 0 0 12px rgba(0, 0, 0, .14);
+        }
+        main .about-me{
+            padding: 25px 20px;
+            width: 300px;
+            background-color: #333;
+        }
+        main .work-experience{
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            width: calc(100% - 300px);
+            padding: 25px 20px;
+        }
+        main .profile-picture{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        main .profile-picture img{
+            width: 100%;
+            max-width: 220px;
+            border-radius: 100%; 
+        }
 
-  .name {
-    text-align: center;
-    color: var(--blue);
-    font-size: 38px;
-    font-weight: 800;
-    letter-spacing: 7px;
-    margin: 0 0 18px;
-    font-family: fantasy;
-  }
 
-  .contact {
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-    padding: 10px 4px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 16px;
-    align-items: center;
-    font-size: 12px;
-    color: #444;
-    margin-bottom: 16px;
-  }
 
-  .contact div {
-    display: flex;
-    gap: 7px;
-    align-items: flex-start;
-  }
 
-  .contact .center { justify-content: center; }
-  .contact .right { justify-content: flex-end; }
+        
 
-  .icon {
-    color: var(--blue);
-    font-size: 15px;
-    line-height: 1;
-  }
+        /* Section heading */
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
 
-  .section-title {
-    background: var(--blue);
-    color: white;
-    font-size: 22px;
-    font-weight: 300;
-    letter-spacing: 1px;
-    padding: 8px 22px;
-    margin: 17px 0 12px;
-    font-family: fantasy;
-  }
+        .section-icon {
+            width: 34px;
+            height: 34px;
+            color: var(--timeline-color);
+            flex-shrink: 0;
+        }
+        .section-icon svg{
+            width: 35px;
+            height: 35px;
+        }
 
-  .summary {
-    font-size: 12px;
-    line-height: 1.45;
-    margin: 0 2px 8px;
-  }
+        .section-header .heading{
+            margin: 0;
+            font-family: 'Aptos', 'Segoe UI', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--timeline-heading-color);
+        }
 
-  .timeline {
-    margin-top: 4px;
-  }
+        /* Timeline */
+        .timeline {
+            position: relative;
+            margin-left: var(--timeline-x);
+            padding-top: 12px;
+        }
 
-  .job {
-    display: grid;
-    grid-template-columns: 1.55in 1px 1fr;
-    column-gap: 15px;
-    position: relative;
-    margin-bottom: 15px;
-  }
+        /* ONE continuous vertical line */
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: var(--timeline-width);
+            background: var(--timeline-color);
+        }
 
-  .job-date {
-    text-align: right;
-    font-size: 11px;
-    line-height: 1.35;
-    color: #444;
-    padding-top: 1px;
-  }
+        /* Each item */
+        .timeline-item {
+            position: relative;
+            display: flex;
+            min-height: 120px;
+        }
 
-  .line {
-    background: #cfd7dc;
-    position: relative;
-    min-height: 52px;
-  }
+        /* Dots */
+        .timeline-dot {
+            position: absolute;
+            left: calc(
+                (var(--timeline-width) / 2) - 6px
+            );
+            top: 35px;
 
-  .line::before {
-    content: "";
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background: var(--blue);
-    border-radius: 50%;
-    left: 50%;
-    top: 4px;
-    transform: translateX(-50%);
-  }
+            width: 12px;
+            height: 12px;
 
-  .job-content {
-    padding-left: 1px;
-  }
+            background: var(--timeline-color);
+            border-radius: 50%;
+            z-index: 2;
+        }
 
-  .job-title {
-    font-size: 15px;
-    font-weight: 700;
-    margin: 0 0 1px;
-  }
+        /* Content */
+        .timeline-main{
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+        }
+        .timeline-content{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-left: 30px;
+            padding-bottom: 30px;
+        }
 
-  .job-description {
-    font-size: 11px;
-    line-height: 1.35;
-    margin: 0;
-  }
+        .timeline-date {
+            line-height: 1;
+            font-size: 14px;
+            color: var(--timeline-heading-color);
+        }
 
-  .education {
-    display: grid;
-    grid-template-columns: 1.55in 1px 1fr;
-    column-gap: 15px;
-    align-items: start;
-  }
+        .timeline-title{
+            line-height: 1;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--timeline-heading-color);
+        }
 
-  .education-date {
-    text-align: right;
-    font-size: 11px;
-    padding-top: 2px;
-  }
-
-  .education-line {
-    width: 1px;
-    height: 55px;
-    background: #cfd7dc;
-    position: relative;
-  }
-
-  .education-line::before {
-    content: "";
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background: var(--blue);
-    border-radius: 50%;
-    left: 50%;
-    top: 4px;
-    transform: translateX(-50%);
-  }
-
-  .degree {
-    font-size: 15px;
-    font-weight: 700;
-    margin: 0 0 2px;
-  }
-
-  .school {
-    font-size: 11px;
-    margin: 0;
-  }
-
-  .skills {
-    display: grid;
-    grid-template-columns: 1.55in 1px 1fr;
-    column-gap: 15px;
-  }
-
-  .skill {
-    display: contents;
-  }
-
-  .skill-level {
-    text-align: right;
-    font-size: 11px;
-    padding: 5px 0;
-  }
-
-  .skill-marker {
-    width: 1px;
-    background: #cfd7dc;
-    position: relative;
-    min-height: 27px;
-  }
-
-  .skill-marker::before {
-    content: "";
-    position: absolute;
-    width: 9px;
-    height: 9px;
-    background: var(--blue);
-    border-radius: 50%;
-    left: 50%;
-    top: 8px;
-    transform: translateX(-50%);
-  }
-
-  .skill-name {
-    font-size: 14px;
-    font-weight: 700;
-    padding: 4px 0;
-  }
-
-  .profile-picture{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    width: 100%;
-    margin-bottom: 5px;
-  }
-
-  .profile-picture img{
-    width: 100%;
-    max-width: 150px;
-    border-radius: 100%;
-  }
-
-  @media print {
-    body { background: white; }
-    .page {
-      margin: 0;
-      width: 8.27in;
-      min-height: 11.69in;
-      box-shadow: none;
-      page-break-after: avoid;
-    }
-  }
-
-  @media (max-width: 850px) {
-    .page {
-      width: calc(100% - 24px);
-      min-height: auto;
-      margin: 12px auto;
-      padding: 25px 22px 32px;
-    }
-    .name { font-size: 30px; letter-spacing: 4px; }
-    .contact { grid-template-columns: 1fr; }
-    .contact .center, .contact .right { justify-content: flex-start; }
-    .job, .education, .skills {
-      grid-template-columns: 1.1in 1px 1fr;
-    }
-  }
+        .timeline-school{
+            line-height: 1;
+            font-size: 14px;
+            color: var(--timeline-heading-color);
+        }
+        .timeline-section.education{
+            display: flex;
+            flex-direction: column;
+        }
+        .timeline-section.education .timeline-item{
+            min-height: unset;
+        }
+        .timeline-section.education .timeline-content{
+            padding-bottom: 10px;
+        }
+        .timeline-section.education.skills .timeline-dot{
+            top: 2px;
+        }
+        .timeline-section.education.skills .timeline-content{
+            padding-bottom: 0;
+        }
+        .timeline-section.education.skills .timeline{
+            padding: 10px 0;
+        }
+        .timeline-section.education.skills .timeline-title{
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .descriptions .name{
+            font-family: fantasy;
+            text-transform: uppercase;
+            margin: 0;
+            letter-spacing: 7px;
+            color: var(--timeline-heading-color);
+            font-weight: 500;
+            font-size: 50px;
+        }
+        .descriptions .position{
+            font-family: 'Aptos', 'Segoe UI', sans-serif;
+            text-transform: uppercase;
+            font-weight: 900;
+            font-size: 16px;
+            letter-spacing: 1px;
+            color: var(--timeline-heading-color);
+            margin: 0;
+        }
+        .professional-summary .section-header .heading{
+            color: #000;
+        }
+        .timeline-section.profile.experience .timeline-date{
+            color: #000;
+        }
+        .timeline-section.profile.experience .timeline-school{
+            color: #000;
+        }
+        .timeline-section.profile .timeline-title{
+            color: #000;
+            line-height: 1.5;
+            font-weight: 400;
+        }
+        .timeline-section.profile.experience .timeline-content{
+            padding-bottom: 20px;
+        }
+        .timeline-section.profile.experience .timeline-item{
+            min-height: fit-content;
+        }
+        .timeline-section.profile.experience .timeline-content{
+            gap: 5px;
+        }
+        .timeline-section.profile.experience  .timeline-title{
+            font-family: fantasy;
+            color: #131313;
+            font-size: 18px;
+            letter-spacing: 1px;
+        }
+        .work-experience .contact-deets{
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+            align-items: center;
+        }
+        .work-experience .contact{
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            justify-content: center;
+        }
+        .work-experience .icon{
+            display: flex;
+            width: 30px;
+            background-color: #f5b91e;
+            padding: 5px;
+            border-radius: 100%;
+        }
+        .work-experience .icon svg{
+            width: fit-content;
+            height: fit-content;
+            fill: #000;
+        }
 </style>
 </head>
 
 <body>
-  <main class="page">
-    
-    <div class="profile-picture">
-        <img src="./IvanQuibod-Portrait.jpg" alt="Ivan Quibod">
-    </div>
+    <main>
+        <div class="about-me">
 
-    <div class="descriptions">
-        <h1 class="name">Ivan G. Quibod</h1>
-        <h2 class="position">Senior WordPress Developer</h2>
-        <div class="experience">
-            <span>WordPress • PHP • Elementor • Divi • Gutenberg • Custom Plugins</span>
+            <div class="profile-picture">
+                <img src="./IvanQuibod-Portrait.jpg" alt="Ivan Quibod">
+            </div>
+
+            <div class="timeline-main">
+                <div class="timeline-section education">
+                    <div class="section-header">
+                        <div class="section-icon">
+                            <svg class="section-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path fill="currentColor" d="M32 8 4 20l28 12 22-9.43V39h4V20L32 8z"/>
+                            <path fill="currentColor" d="M14 28v10c0 6.63 8.06 12 18 12s18-5.37 18-12V28L32 36 14 28z"/>
+                            <path fill="currentColor" d="M54 25v13h4V23.29L54 25z"/>
+                            <circle fill="currentColor" cx="56" cy="42" r="3"/>
+                            <path fill="currentColor" d="M53.5 44h5l1.5 10h-8l1.5-10z"/>
+                            </svg>
+                        </div>
+                        <h2 class="heading">Education</h2>
+                    </div>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">2010 - 2014</div>
+                                <div class="timeline-title">Bachelor of Science in Information Technology</div>
+                                <div class="timeline-school">Cebu Institute of Technology - University</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-section education skills">
+                    <div class="section-header">
+                        <div class="section-icon">
+                            <?xml version="1.0" encoding="utf-8"?>
+                            <!-- License: MIT. Made by artcoholic: https://github.com/artcoholic/akar-icons -->
+                            <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14 3.2686C14 2.56797 13.432 2 12.7314 2H11.2686C10.568 2 10 2.56797 10 3.2686V3.2686C10 3.84745 9.60365 4.34302 9.0652 4.55546C8.97998 4.58908 8.89547 4.62413 8.81172 4.66056C8.2807 4.89156 7.64975 4.82144 7.24027 4.41197V4.41197C6.74474 3.91643 5.94132 3.91643 5.44579 4.41197L4.41187 5.44588C3.91632 5.94143 3.91632 6.74487 4.41187 7.24042V7.24042C4.82135 7.6499 4.89147 8.28086 4.66049 8.81189C4.62408 8.89559 4.58906 8.98004 4.55546 9.0652C4.34302 9.60365 3.84744 10 3.2686 10V10C2.56797 10 2 10.568 2 11.2686V12.7314C2 13.432 2.56797 14 3.2686 14V14C3.84744 14 4.34302 14.3963 4.55546 14.9348C4.58906 15.02 4.62408 15.1044 4.66049 15.1881C4.89148 15.7191 4.82135 16.3501 4.41187 16.7596V16.7596C3.91632 17.2551 3.91632 18.0586 4.41187 18.5541L5.44578 19.588C5.94132 20.0836 6.74474 20.0836 7.24028 19.588V19.588C7.64975 19.1786 8.28071 19.1084 8.81173 19.3394C8.89548 19.3759 8.97998 19.4109 9.0652 19.4445C9.60365 19.657 10 20.1526 10 20.7314V20.7314C10 21.432 10.568 22 11.2686 22H12.7314C13.432 22 14 21.432 14 20.7314V20.7314C14 20.1526 14.3963 19.657 14.9348 19.4445C15.02 19.4109 15.1045 19.3759 15.1882 19.3395C15.7192 19.1085 16.3501 19.1786 16.7595 19.5881V19.5881C17.255 20.0836 18.0584 20.0836 18.5539 19.5881L19.588 18.554C20.0835 18.0585 20.0835 17.2552 19.588 16.7597V16.7597C19.1785 16.3502 19.1084 15.7193 19.3394 15.1883C19.3759 15.1046 19.4109 15.02 19.4445 14.9348C19.657 14.3964 20.1526 14 20.7314 14V14C21.432 14 22 13.432 22 12.7314V11.2686C22 10.568 21.432 10 20.7314 10V10C20.1526 10 19.657 9.60365 19.4445 9.0652C19.4109 8.97996 19.3759 8.89544 19.3394 8.81166C19.1084 8.28068 19.1785 7.64977 19.588 7.24033V7.24033C20.0835 6.74483 20.0835 5.94147 19.588 5.44597L18.5539 4.41193C18.0584 3.91642 17.255 3.91642 16.7595 4.41193V4.41193C16.3501 4.82138 15.7192 4.8915 15.1882 4.66052C15.1045 4.6241 15.02 4.58907 14.9348 4.55546C14.3963 4.34302 14 3.84744 14 3.2686V3.2686Z" stroke="#f5b91e" stroke-width="2"/>
+                            <path d="M16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12Z" stroke="#f5b91e" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h2 class="heading">Skills</h2>
+                    </div>
+                    <div class="timeline--line">
+                            <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    
+                                    <div class="timeline-title">WordPress</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    
+                                    <div class="timeline-title">PHP</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    
+                                    <div class="timeline-title">HTML5</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    
+                                    <div class="timeline-title">CSS3 / SASS</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    
+                                    <div class="timeline-title">Elementor</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    
+                                    <div class="timeline-title">Divi</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    
+                                    <div class="timeline-title">Front-end development</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    
+                                    <div class="timeline-title">Gutenberg / Block Editor</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    
+                                    <div class="timeline-title">Kadence</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    
+                                    <div class="timeline-title">Advanced Custom Fields (ACF)</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    
+                                    <div class="timeline-title">JavaScript / jQuery</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    
+                                    <div class="timeline-title">Custom WordPress Plugins</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    
+                                    <div class="timeline-title">Custom Post Types (CPT)</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    
+                                    <div class="timeline-title">Responsive Web Development</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    
+                                    <div class="timeline-title">WordPress Theme Development</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    
+                                    <div class="timeline-title">Responsive Web Development</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+                    
+                </div>
+            </div>
         </div>
-    </div>
 
-    
+        <div class="work-experience">
+            <div class="descriptions">
+                <h1 class="name">Ivan G. Quibod</h1>
+                <h2 class="position">WordPress Developer</h2>
+            </div>
+
+            <div class="contact">
+                <div class="contact-deets">
+                    <div class="icon">
+                        <?xml version="1.0" encoding="utf-8"?>
+                        <!-- License: PD. Made by Aleksey Popov: https://dribbble.com/AlekseyPopov -->
+                        <svg fill="#000000" width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M21,7.38246601 L21,5 L3,5 L3,7.38199365 L12.0000224,11.8824548 L21,7.38246601 Z M21,9.61853399 L11.9999776,14.1185452 L3,9.61810635 L3,19 L21,19 L21,9.61853399 Z M3,3 L21,3 C22.1045695,3 23,3.8954305 23,5 L23,19 C23,20.1045695 22.1045695,21 21,21 L3,21 C1.8954305,21 1,20.1045695 1,19 L1,5 C1,3.8954305 1.8954305,3 3,3 Z"/>
+                        </svg>
+                    </div>
+                    <span><a href="mailto:iquibod@gmail.com">iquibod@gmail.com</a></span>
+                </div>
+
+                <div class="contact-deets">
+                    <div class="icon">
+                        <?xml version="1.0" encoding="utf-8"?>
+                        <!-- License: CC Attribution. Made by Hand-Drawn Goods: https://handdrawngoods.com/ -->
+                        <svg fill="#000000" width="800px" height="800px" viewBox="-21.11 0 105 105" xmlns="http://www.w3.org/2000/svg">
+                        <path id="mobile" d="M225.636,528.552c5.783-.279,10.361.65,15.624.886.511.866,3.03-.278,3.538.588,1.208-.481,1.663.106,2.949-.294a25.763,25.763,0,0,1,7.37.589,15.366,15.366,0,0,1,5.3,5.307c.45,1.517.7,3.226,1.179,4.718.307,2.66-.607,4.106-.587,6.485.542,7.317.47,15.252.881,22.7-.332,9.3-.793,18.468-1.176,27.712-.583,8.261.2,18.613-1.477,26.532-1.322,2.213-3.824,3.247-5.009,5.6-1.356.611-3.506.424-4.424,1.476-.8.182-.733,1.231-1.769,1.178-.116.864-1.729.235-2.061.884-6.25-.252-11.627.362-17.393.589-5.541-.453-11.062-.927-16.8-1.179-.008-.286-.361-.229-.59-.294a27.021,27.021,0,0,1-5.6-2.654c-1.782-.872-2.734-2.573-4.13-3.831a2.742,2.742,0,0,0-.881-2.065,29.415,29.415,0,0,1-.591-8.253c-.536-3.9-.3-8.266-.3-12.676a117.221,117.221,0,0,1,.3-12.677c-.462-8.442-.885-16.978-.885-25.648,0-8.448,1.048-16.956.885-25.352a12.693,12.693,0,0,1,2.357-4.423c.222-1.94,2.046-2.278,2.948-3.536.343.047.525-.066.591-.294,2.459-1.08,5.7-1.379,9.434-1.18a45.769,45.769,0,0,1,9.728-.59C225.391,528.9,225.573,528.783,225.636,528.552Zm9.729,11.794c-.122-.5-.379.061-.883,0-4.042.086-8.491-.238-12.086.293-3.917.213-7.784.47-11.5.885-.97,2.275-.959,5.527-.888,8.842a20.733,20.733,0,0,0-.293,4.424c-.184,1.486-.811,2.527-.885,4.127.3,10.386-.4,20.97,0,30.659a5.838,5.838,0,0,1,0,1.473c-.035.3.286.349.295.59.179,3.735-.376,7.338.3,10.909a6.4,6.4,0,0,0,.885,2.359c.3.781.484,1.675,1.473,1.768.657.916,2.176.967,3.831.884a16.623,16.623,0,0,0,4.425-.3c3.3.155,5.766-.52,9.135-.295,5.75-.638,12.641-.134,18.867-.294.841-1.223,2.1-2.034,2.951-3.244-.027-10.539.045-20.983,1.474-30.068a126.042,126.042,0,0,1-1.474-15.921V548.6c0-2.961.413-6.043-.59-8.254A77.4,77.4,0,0,0,235.365,540.346Zm-21.816,73.7c.044-.348.525-.669,0-.885C213.508,613.508,213.024,613.828,213.549,614.044Zm3.245,1.475a21.174,21.174,0,0,0,2.358-.885c1.057-.121,2.284-.075,2.653-.885C219.857,613.417,216.482,612.778,216.794,615.519Zm13.56-1.77c-2.567,1.265-6.039,1.628-7.371,4.128v4.716a2.73,2.73,0,0,1,1.179,1.769c1.189.287,1.806,1.143,2.655,1.77,4.429.829,7.92-.608,8.548-4.423a17.991,17.991,0,0,0-2.062-6.78A13.027,13.027,0,0,0,230.354,613.749Zm-27.12.295c-.086-.081-.451.144-.3.294C203.021,614.42,203.386,614.2,203.234,614.044Zm48.05,1.18v.589c.725.459.866-1,.3-.884C251.563,615.108,251.536,615.277,251.284,615.224Zm-48.641,4.421c-.191-1.381.386-3.53-.3-4.421C201.729,616.259,200.62,619.326,202.643,619.645ZM216.2,616.7c-.226.962-1.564,2.349-.881,3.242.266-1.6,1.552-2.179,2.065-3.537C216.825,616.337,216.733,616.734,216.2,616.7Zm4.423-.295c-.226.065-.581.008-.586.295C220.264,616.631,220.616,616.69,220.624,616.4Zm24.174,3.832c1.733-.136,2.058-1.677,2.359-3.242C245.205,615.9,244.3,618.781,244.8,620.235Zm-41.564,0c.079.268,1.1.99,1.178.294a1.656,1.656,0,0,0-1.178-.294C203.051,619.807,202.877,620.265,203.234,620.235Zm15.033,5.307c.331.061.457.327.59.59a1.822,1.822,0,0,0,2.06-2.064C219.985,622.889,218.056,623.838,218.267,625.542Zm-9.727,3.537c.263-.522,1.2-.376.884-1.475-.4-.092-.561-.418-1.178-.293C207.838,627.688,207.731,629.074,208.54,629.079Z" transform="translate(-199.105 -528.5)" fill-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <span><a href="tel:+639988895966">(+63) 998 8895 966</a></span>
+                </div>
+
+                <div class="contact-deets">
+                    <div class="icon">
+                        <?xml version="1.0" encoding="utf-8"?>
+                        <!-- License: CC Attribution. Made by Mariusz Ostrowski: https://github.com/mariuszostrowski/subway -->
+                        <svg fill="#000000" height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                            viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+                        <path d="M256,0C149.3,0,64,85.3,64,192c0,36.9,11,65.4,30.1,94.3l141.7,215v0c4.3,6.5,11.7,10.7,20.2,10.7c8.5,0,16-4.3,20.2-10.7
+                            l141.7-215C437,257.4,448,228.9,448,192C448,85.3,362.7,0,256,0z M256,298.6c-58.9,0-106.7-47.8-106.7-106.8
+                            c0-59,47.8-106.8,106.7-106.8c58.9,0,106.7,47.8,106.7,106.8C362.7,250.8,314.9,298.6,256,298.6z"/>
+                        </svg>
+                    </div>
+                    <span>Davao City 8000 (PH)</span>
+                </div>
+            </div>
+
+            <div class="professional-summary">
+                <div class="timeline-section profile">
+                    <div class="section-header">
+                        <div class="section-icon">
+                            <?xml version="1.0" encoding="utf-8"?>
+                            <!-- License: CC Attribution. Made by Saeedworks: https://dribbble.com/saeedworks -->
+                            <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="style=linear">
+                            <g id="profile">
+                            <path id="vector" d="M12 11C14.4853 11 16.5 8.98528 16.5 6.5C16.5 4.01472 14.4853 2 12 2C9.51472 2 7.5 4.01472 7.5 6.5C7.5 8.98528 9.51472 11 12 11Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path id="rec" d="M5 18.5714C5 16.0467 7.0467 14 9.57143 14H14.4286C16.9533 14 19 16.0467 19 18.5714C19 20.465 17.465 22 15.5714 22H8.42857C6.53502 22 5 20.465 5 18.5714Z" stroke="#000000" stroke-width="1.5"/>
+                            </g>
+                            </g>
+                            </svg>
+                        </div>
+                        <h2 class="heading">Professional Summary</h2>
+                    </div>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-title">Senior WordPress Developer with 11+ years of experience building, customizing, and maintaining WordPress websites for businesses and agencies. Experienced in PHP, HTML, CSS, JavaScript, Elementor, Divi, Gutenberg, Kadence, and Oxygen, with hands-on experience developing custom plugins, custom post types, ACF solutions, and third-party/API integrations. Skilled in responsive development, troubleshooting, performance optimization, technical SEO, website migrations, and maintaining complex WordPress environments. Comfortable working independently or with distributed teams to deliver reliable, scalable, and maintainable solutions based on client and business requirements.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="professional-summary">
+                <div class="timeline-section profile experience">
+                    <div class="section-header">
+                        <div class="section-icon">
+                            <?xml version="1.0" encoding="utf-8"?>
+                            <!-- License: MIT. Made by phosphor: https://github.com/phosphor-icons/phosphor-icons -->
+                            <svg fill="#000000" width="800px" height="800px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M216.00781,56H180V48a28.03146,28.03146,0,0,0-28-28H104A28.03146,28.03146,0,0,0,76,48v8H40.00781a20.02229,20.02229,0,0,0-20,20V204a20.02229,20.02229,0,0,0,20,20h176a20.02229,20.02229,0,0,0,20-20V76A20.02229,20.02229,0,0,0,216.00781,56ZM100,48a4.00427,4.00427,0,0,1,4-4h48a4.00427,4.00427,0,0,1,4,4v8H100ZM212.00781,80v35.22021A180.04717,180.04717,0,0,1,128,136a180.05815,180.05815,0,0,1-83.99219-20.771V80Zm-168,120V141.94336A204.301,204.301,0,0,0,128,160a204.30167,204.30167,0,0,0,84.00781-18.063V200ZM104,112a12.00028,12.00028,0,0,1,12-12h24a12,12,0,0,1,0,24H116A12.00028,12.00028,0,0,1,104,112Z"/>
+                            </svg>
+                        </div>
+                        <h2 class="heading">Work Experience</h2>
+                    </div>
+
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">January 2021 – Present (Remote)</div>
+                                <div class="timeline-title">GoWP / QuicklyHire</div>
+                                <div class="timeline-school">WordPress Developer</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">April 2018 – January 2021 (Cebu City, PH)</div>
+                                <div class="timeline-title">Rocket Agency</div>
+                                <div class="timeline-school">WordPress Developer</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">April 2015 – December 2018 (Cebu City, PH)</div>
+                                <div class="timeline-title">Sushi Digital Web Design & Web Application Development</div>
+                                <div class="timeline-school">Web Developer</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">June 2014 – November 2014 (Cebu City, PH)</div>
+                                <div class="timeline-title">Proweaver Inc.</div>
+                                <div class="timeline-school">Web Developer</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
 
-    <div class="contact">
-        <div class="center">
-        <span class="icon">✉</span>
-        <span>iquibod@gmail.com</span>
-        </div>
 
-        <div class="right">
-        <span class="icon">☎</span>
-        <span>+63 998 889 5966</span>
-        </div>
 
-        <div>
-        <span class="icon">📍</span>
-        <span>Davao City 8000 (PH)</span>
-        </div>
-    </div>
-
-    <section>
-      <div class="section-title">PROFESSIONAL SUMMARY</div>
-      <p class="summary">
-       Senior WordPress Developer with 11+ years of experience building, customizing, and maintaining WordPress websites for businesses and agencies. Experienced in PHP, HTML, CSS, JavaScript, Elementor, Divi, Gutenberg, Kadence, and Oxygen, with hands-on experience developing custom plugins, custom post types, ACF solutions, and third-party/API integrations. Skilled in responsive development, troubleshooting, performance optimization, technical SEO, website migrations, and maintaining complex WordPress environments. Comfortable working independently or with distributed teams to deliver reliable, scalable, and maintainable solutions based on client and business requirements.
-      </p>
-    </section>
-
-    <section>
-      <div class="section-title">EMPLOYMENT HISTORY</div>
-
-      <div class="timeline">
-
-        <div class="job">
-          <div class="job-date">January 2021 – Present<br>Remote</div>
-          <div class="line"></div>
-          <div class="job-content">
-            <p class="job-title">Web Developer, GoWP / QuicklyHire</p>
-          </div>
-        </div>
-
-        <div class="job">
-          <div class="job-date">April 2018 – January 2021<br>Cebu City</div>
-          <div class="line"></div>
-          <div class="job-content">
-            <p class="job-title">Web Developer, Rocket Agency</p>
-          </div>
-        </div>
-
-        <div class="job">
-          <div class="job-date">April. 2015 – December 2018<br>Cebu City</div>
-          <div class="line"></div>
-          <div class="job-content">
-            <p class="job-title">Web Developer, Sushi Digital Web Design &amp; Web Application Development</p>
-          </div>
-        </div>
-
-        <div class="job">
-          <div class="job-date">Jun. 2014 – Nov. 2014<br>Cebu City</div>
-          <div class="line"></div>
-          <div class="job-content">
-            <p class="job-title">Web Developer, Proweaver Inc.</p>
             
-          </div>
         </div>
 
-      </div>
-    </section>
-
-    <section>
-      <div class="section-title">EDUCATION</div>
-
-      <div class="education">
-        <div class="education-date">Apr. 2014</div>
-        <div class="education-line"></div>
-        <div>
-          <p class="degree">Bachelor of Science: Information Technology</p>
-          <p class="school">• Cebu Institute of Technology - University - Cebu</p>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="section-title">SKILLS</div>
-
-      <div class="skills">
-
-
-
-    <div class="skill">
-        <div class="skill-level">Expert</div>
-        <div class="skill-marker"></div>
-        <div class="skill-name">WordPress</div>
-    </div>
-
-
-    <div class="skill">
-        <div class="skill-level">Expert</div>
-        <div class="skill-marker"></div>
-        <div class="skill-name">PHP</div>
-    </div>
-
-    <div class="skill">
-        <div class="skill-level">Expert</div>
-        <div class="skill-marker"></div>
-        <div class="skill-name">HTML5</div>
-    </div>
-
-
-    <div class="skill">
-        <div class="skill-level">Expert</div>
-        <div class="skill-marker"></div>
-        <div class="skill-name">CSS3 / SASS</div>
-    </div>
-
-
-    <div class="skill">
-        <div class="skill-level">Expert</div>
-        <div class="skill-marker"></div>
-        <div class="skill-name">Elementor</div>
-    </div>
-
-    <div class="skill">
-        <div class="skill-level">Expert</div>
-        <div class="skill-marker"></div>
-        <div class="skill-name">Divi</div>
-    </div>
-
-    <div class="skill">
-        <div class="skill-level">Expert</div>
-        <div class="skill-marker"></div>
-        <div class="skill-name">Front-end development</div>
-    </div>
-
-
-    <div class="skill">
-        <div class="skill-level">Advanced</div>
-        <div class="skill-marker"></div>
-        <div class="skill-name">Gutenberg / WordPress Block Editor</div>
-    </div>
-
-    <div class="skill">
-        <div class="skill-level">Advanced</div>
-        <div class="skill-marker"></div>
-        <div class="skill-name">Kadence</div>
-    </div>
-
-    <div class="skill">
-        <div class="skill-level">Advanced</div>
-        <div class="skill-marker"></div>
-        <div class="skill-name">Advanced Custom Fields (ACF)</div>
-    </div>
-
-    <div class="skill">
-        <div class="skill-level">Advanced</div>
-        <div class="skill-marker"></div>
-        <div class="skill-name">JavaScript / jQuery</div>
-    </div>
-
-    <div class="skill">
-        <div class="skill-level">Advanced</div>
-        <div class="skill-marker"></div>
-        <div class="skill-name">Custom WordPress Plugins</div>
-    </div>
-
-    <div class="skill">
-        <div class="skill-level">Advanced</div>
-        <div class="skill-marker"></div>
-        <div class="skill-name">Custom Post Types (CPT)</div>
-    </div>
-
-    <div class="skill">
-        <div class="skill-level">Advanced</div>
-        <div class="skill-marker"></div>
-        <div class="skill-name">Responsive Web Development</div>
-    </div>
-
-    <div class="skill">
-        <div class="skill-level">Advanced</div>
-        <div class="skill-marker"></div>
-        <div class="skill-name">WordPress Theme Development</div>
-    </div>
-
-    
-    
-
-
-    
-
-    
-    <div class="skill">
-        <div class="skill-level">Experienced</div>
-        <div class="skill-marker"></div>
-        <div class="skill-name">REST API / Third-Party Integrations</div>
-    </div>
-
-    <div class="skill">
-        <div class="skill-level">Experienced</div>
-        <div class="skill-marker"></div>
-        <div class="skill-name">WordPress Multisite</div>
-    </div>
-
-    <div class="skill">
-        <div class="skill-level">Experienced</div>
-        <div class="skill-marker"></div>
-        <div class="skill-name">Technical SEO</div>
-    </div>
-
-    <div class="skill">
-        <div class="skill-level">Experienced</div>
-        <div class="skill-marker"></div>
-        <div class="skill-name">Website Performance Optimization</div>
-    </div>
-
-    <div class="skill">
-        <div class="skill-level">Experienced</div>
-        <div class="skill-marker"></div>
-        <div class="skill-name">WordPress Migrations</div>
-    </div>
-
-    <div class="skill">
-        <div class="skill-level">Experienced</div>
-        <div class="skill-marker"></div>
-        <div class="skill-name">Git</div>
-    </div>
-
-    <div class="skill">
-        <div class="skill-level">Experienced</div>
-        <div class="skill-marker"></div>
-        <div class="skill-name">MySQL</div>
-    </div>
-      </div>
-    </section>
-
-  </main>
+        
+    </main>
 </body>
 </html>
