@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ivan G. Quibod - Resume</title>
+<style>
+  :root {
+    --blue: #45a5d8;
+    --text: #222;
+    --muted: #555;
+    --page-width: 8.27in;
+  }
+
+  * { box-sizing: border-box; }
+  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+   .descriptions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    .section-title {
+    font-family: 'Aptos', sans-serif;
+    font-weight: 700;
+    }   
+  .descriptions .name{
+    font-family: 'Aptos', 'Segoe UI', sans-serif;
+    text-transform: uppercase;
+    margin: 0;
+    letter-spacing: 2px;
+  }
+  .descriptions .position {
+    margin: 0;
+    font-family: 'Aptos', 'Segoe UI', sans-serif;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 18px;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+}
+  body {
+    margin: 0;
+    background: #e9e9e9;
+    font-family: 'Lato', sans-serif;
+    color: var(--text);
+    font-family: system-ui;
+  }
+
+  .page {
+    width: var(--page-width);
+    min-height: 11.69in;
+    margin: 24px auto;
+    padding: 34px 38px 40px;
+    background: #fff;
+    box-shadow: 0 0 12px rgba(0,0,0,.14);
+  }
+
+  .name {
+    text-align: center;
+    color: var(--blue);
+    font-size: 38px;
+    font-weight: 800;
+    letter-spacing: 7px;
+    margin: 0 0 18px;
+    font-family: fantasy;
+  }
+
+  .contact {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: center;
+    font-size: 12px;
+    color: #444;
+    margin-bottom: 16px;
+  }
+
+  .contact div {
+    display: flex;
+    gap: 7px;
+    align-items: flex-start;
+  }
+
+  .contact .center { justify-content: center; }
+  .contact .right { justify-content: flex-end; }
+
+  .icon {
+    color: var(--blue);
+    font-size: 15px;
+    line-height: 1;
+  }
+
+  .section-title {
+    background: var(--blue);
+    color: white;
+    font-size: 22px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    padding: 8px 22px;
+    margin: 17px 0 12px;
+    font-family: fantasy;
+  }
+
+  .summary {
+    font-size: 12px;
+    line-height: 1.45;
+    margin: 0 2px 8px;
+  }
+
+  .timeline {
+    margin-top: 4px;
+  }
+
+  .job {
+    display: grid;
+    grid-template-columns: 1.55in 1px 1fr;
+    column-gap: 15px;
+    position: relative;
+    margin-bottom: 15px;
+  }
+
+  .job-date {
+    text-align: right;
+    font-size: 11px;
+    line-height: 1.35;
+    color: #444;
+    padding-top: 1px;
+  }
+
+  .line {
+    background: #cfd7dc;
+    position: relative;
+    min-height: 52px;
+  }
+
+  .line::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: var(--blue);
+    border-radius: 50%;
+    left: 50%;
+    top: 4px;
+    transform: translateX(-50%);
+  }
+
+  .job-content {
+    padding-left: 1px;
+  }
+
+  .job-title {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0 0 1px;
+  }
+
+  .job-description {
+    font-size: 11px;
+    line-height: 1.35;
+    margin: 0;
+  }
+
+  .education {
+    display: grid;
+    grid-template-columns: 1.55in 1px 1fr;
+    column-gap: 15px;
+    align-items: start;
+  }
+
+  .education-date {
+    text-align: right;
+    font-size: 11px;
+    padding-top: 2px;
+  }
+
+  .education-line {
+    width: 1px;
+    height: 55px;
+    background: #cfd7dc;
+    position: relative;
+  }
+
+  .education-line::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: var(--blue);
+    border-radius: 50%;
+    left: 50%;
+    top: 4px;
+    transform: translateX(-50%);
+  }
+
+  .degree {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0 0 2px;
+  }
+
+  .school {
+    font-size: 11px;
+    margin: 0;
+  }
+
+  .skills {
+    display: grid;
+    grid-template-columns: 1.55in 1px 1fr;
+    column-gap: 15px;
+  }
+
+  .skill {
+    display: contents;
+  }
+
+  .skill-level {
+    text-align: right;
+    font-size: 11px;
+    padding: 5px 0;
+  }
+
+  .skill-marker {
+    width: 1px;
+    background: #cfd7dc;
+    position: relative;
+    min-height: 27px;
+  }
+
+  .skill-marker::before {
+    content: "";
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    background: var(--blue);
+    border-radius: 50%;
+    left: 50%;
+    top: 8px;
+    transform: translateX(-50%);
+  }
+
+  .skill-name {
+    font-size: 14px;
+    font-weight: 700;
+    padding: 4px 0;
+  }
+
+  .profile-picture{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .profile-picture img{
+    width: 100%;
+    max-width: 150px;
+    border-radius: 100%;
+  }
+
+  @media print {
+    body { background: white; }
+    .page {
+      margin: 0;
+      width: 8.27in;
+      min-height: 11.69in;
+      box-shadow: none;
+      page-break-after: avoid;
+    }
+  }
+
+  @media (max-width: 850px) {
+    .page {
+      width: calc(100% - 24px);
+      min-height: auto;
+      margin: 12px auto;
+      padding: 25px 22px 32px;
+    }
+    .name { font-size: 30px; letter-spacing: 4px; }
+    .contact { grid-template-columns: 1fr; }
+    .contact .center, .contact .right { justify-content: flex-start; }
+    .job, .education, .skills {
+      grid-template-columns: 1.1in 1px 1fr;
+    }
+  }
+</style>
+</head>
+
+<body>
+  <main class="page">
+    
+    <div class="profile-picture">
+        <img src="./IvanQuibod-Portrait.jpg" alt="Ivan Quibod">
+    </div>
+
+    <div class="descriptions">
+        <h1 class="name">Ivan G. Quibod</h1>
+        <h2 class="position">Senior WordPress Developer</h2>
+        <div class="experience">
+            <span>WordPress • PHP • Elementor • Divi • Gutenberg • Custom Plugins</span>
+        </div>
+    </div>
+
+    
+
+
+
+    <div class="contact">
+        <div class="center">
+        <span class="icon">✉</span>
+        <span>iquibod@gmail.com</span>
+        </div>
+
+        <div class="right">
+        <span class="icon">☎</span>
+        <span>+63 998 889 5966</span>
+        </div>
+
+        <div>
+        <span class="icon">📍</span>
+        <span>Davao City 8000 (PH)</span>
+        </div>
+    </div>
+
+    <section>
+      <div class="section-title">PROFESSIONAL SUMMARY</div>
+      <p class="summary">
+       Senior WordPress Developer with 11+ years of experience building, customizing, and maintaining WordPress websites for businesses and agencies. Experienced in PHP, HTML, CSS, JavaScript, Elementor, Divi, Gutenberg, Kadence, and Oxygen, with hands-on experience developing custom plugins, custom post types, ACF solutions, and third-party/API integrations. Skilled in responsive development, troubleshooting, performance optimization, technical SEO, website migrations, and maintaining complex WordPress environments. Comfortable working independently or with distributed teams to deliver reliable, scalable, and maintainable solutions based on client and business requirements.
+      </p>
+    </section>
+
+    <section>
+      <div class="section-title">EMPLOYMENT HISTORY</div>
+
+      <div class="timeline">
+
+        <div class="job">
+          <div class="job-date">January 2021 – Present<br>Remote</div>
+          <div class="line"></div>
+          <div class="job-content">
+            <p class="job-title">Web Developer, GoWP / QuicklyHire</p>
+          </div>
+        </div>
+
+        <div class="job">
+          <div class="job-date">April 2018 – January 2021<br>Cebu City</div>
+          <div class="line"></div>
+          <div class="job-content">
+            <p class="job-title">Web Developer, Rocket Agency</p>
+          </div>
+        </div>
+
+        <div class="job">
+          <div class="job-date">April. 2015 – December 2018<br>Cebu City</div>
+          <div class="line"></div>
+          <div class="job-content">
+            <p class="job-title">Web Developer, Sushi Digital Web Design &amp; Web Application Development</p>
+          </div>
+        </div>
+
+        <div class="job">
+          <div class="job-date">Jun. 2014 – Nov. 2014<br>Cebu City</div>
+          <div class="line"></div>
+          <div class="job-content">
+            <p class="job-title">Web Developer, Proweaver Inc.</p>
+            
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">EDUCATION</div>
+
+      <div class="education">
+        <div class="education-date">Apr. 2014</div>
+        <div class="education-line"></div>
+        <div>
+          <p class="degree">Bachelor of Science: Information Technology</p>
+          <p class="school">• Cebu Institute of Technology - University - Cebu</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">SKILLS</div>
+
+      <div class="skills">
+
+
+
+    <div class="skill">
+        <div class="skill-level">Expert</div>
+        <div class="skill-marker"></div>
+        <div class="skill-name">WordPress</div>
+    </div>
+
+
+    <div class="skill">
+        <div class="skill-level">Expert</div>
+        <div class="skill-marker"></div>
+        <div class="skill-name">PHP</div>
+    </div>
+
+    <div class="skill">
+        <div class="skill-level">Expert</div>
+        <div class="skill-marker"></div>
+        <div class="skill-name">HTML5</div>
+    </div>
+
+
+    <div class="skill">
+        <div class="skill-level">Expert</div>
+        <div class="skill-marker"></div>
+        <div class="skill-name">CSS3 / SASS</div>
+    </div>
+
+
+    <div class="skill">
+        <div class="skill-level">Expert</div>
+        <div class="skill-marker"></div>
+        <div class="skill-name">Elementor</div>
+    </div>
+
+    <div class="skill">
+        <div class="skill-level">Expert</div>
+        <div class="skill-marker"></div>
+        <div class="skill-name">Divi</div>
+    </div>
+
+    <div class="skill">
+        <div class="skill-level">Expert</div>
+        <div class="skill-marker"></div>
+        <div class="skill-name">Front-end development</div>
+    </div>
+
+
+    <div class="skill">
+        <div class="skill-level">Advanced</div>
+        <div class="skill-marker"></div>
+        <div class="skill-name">Gutenberg / WordPress Block Editor</div>
+    </div>
+
+    <div class="skill">
+        <div class="skill-level">Advanced</div>
+        <div class="skill-marker"></div>
+        <div class="skill-name">Kadence</div>
+    </div>
+
+    <div class="skill">
+        <div class="skill-level">Advanced</div>
+        <div class="skill-marker"></div>
+        <div class="skill-name">Advanced Custom Fields (ACF)</div>
+    </div>
+
+    <div class="skill">
+        <div class="skill-level">Advanced</div>
+        <div class="skill-marker"></div>
+        <div class="skill-name">JavaScript / jQuery</div>
+    </div>
+
+    <div class="skill">
+        <div class="skill-level">Advanced</div>
+        <div class="skill-marker"></div>
+        <div class="skill-name">Custom WordPress Plugins</div>
+    </div>
+
+    <div class="skill">
+        <div class="skill-level">Advanced</div>
+        <div class="skill-marker"></div>
+        <div class="skill-name">Custom Post Types (CPT)</div>
+    </div>
+
+    <div class="skill">
+        <div class="skill-level">Advanced</div>
+        <div class="skill-marker"></div>
+        <div class="skill-name">Responsive Web Development</div>
+    </div>
+
+    <div class="skill">
+        <div class="skill-level">Advanced</div>
+        <div class="skill-marker"></div>
+        <div class="skill-name">WordPress Theme Development</div>
+    </div>
+
+    
+    
+
+
+    
+
+    
+    <div class="skill">
+        <div class="skill-level">Experienced</div>
+        <div class="skill-marker"></div>
+        <div class="skill-name">REST API / Third-Party Integrations</div>
+    </div>
+
+    <div class="skill">
+        <div class="skill-level">Experienced</div>
+        <div class="skill-marker"></div>
+        <div class="skill-name">WordPress Multisite</div>
+    </div>
+
+    <div class="skill">
+        <div class="skill-level">Experienced</div>
+        <div class="skill-marker"></div>
+        <div class="skill-name">Technical SEO</div>
+    </div>
+
+    <div class="skill">
+        <div class="skill-level">Experienced</div>
+        <div class="skill-marker"></div>
+        <div class="skill-name">Website Performance Optimization</div>
+    </div>
+
+    <div class="skill">
+        <div class="skill-level">Experienced</div>
+        <div class="skill-marker"></div>
+        <div class="skill-name">WordPress Migrations</div>
+    </div>
+
+    <div class="skill">
+        <div class="skill-level">Experienced</div>
+        <div class="skill-marker"></div>
+        <div class="skill-name">Git</div>
+    </div>
+
+    <div class="skill">
+        <div class="skill-level">Experienced</div>
+        <div class="skill-marker"></div>
+        <div class="skill-name">MySQL</div>
+    </div>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>
