@@ -40,7 +40,7 @@ a {
 }
 
 .section {
-    padding: 50px 0;
+    padding: 80px 0;
 }
 
 .section-header {
@@ -490,6 +490,77 @@ footer {
     display: flex;
     justify-content: space-between;
     gap: 20px;
+}
+
+/* =========================================
+   RESUME
+========================================= */
+
+.resume {
+    background: #f7f7f7;
+}
+
+.resume-content {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 80px;
+    align-items: center;
+}
+
+.resume-text p {
+    max-width: 600px;
+    color: #666;
+    font-size: 17px;
+    margin-bottom: 28px;
+}
+
+.resume-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.resume-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 28px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 0;
+}
+
+.resume-icon {
+    width: 68px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #171717;
+    color: #fff;
+    border-radius: 0;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.resume-card strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.resume-card span {
+    font-size: 13px;
+    color: #777;
+}
+
+
+@media (max-width: 850px) {
+
+    .resume-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
 }
 
 
