@@ -40,7 +40,7 @@ a {
 }
 
 .section {
-    padding: 100px 0;
+    padding: 50px 0;
 }
 
 .section-header {
@@ -77,8 +77,9 @@ a {
 ========================================= */
 
 header {
-    position: sticky;
+    position: fixed;
     top: 0;
+    width: 100%;
     z-index: 100;
     background: #171717;
     backdrop-filter: blur(15px);
@@ -86,7 +87,7 @@ header {
 }
 
 .nav {
-    height: 76px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -132,7 +133,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 50px 0 110px;
+    padding: 80px 20px 50px;
     height: 100vh;
 }
 
@@ -374,7 +375,10 @@ header {
 }
 
 .project-content {
+    display: flex;
+    flex-direction: column;
     padding: 28px;
+    height: 100%;
 }
 
 .project-content h3 {
@@ -392,6 +396,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     gap: 7px;
+    margin-top: auto;
 }
 
 .tag {
