@@ -120,8 +120,7 @@ header{
             transition: all 0.3s ease;
         }
     }
-    &.active {
-        
+    &.active{
         .nav {
             height: 60px;
         }
@@ -129,6 +128,9 @@ header{
             img{
                 width: 100%;
                 max-width: 80px;
+                @media only screen and (max-width: 601px){
+                    max-width: 0;
+                }
             }
         }
     }
@@ -139,6 +141,9 @@ header{
     gap: 30px;
     align-items: center;
     list-style: none;
+    @media only screen and (max-width: 601px){
+        gap: 15px;
+    }
     .hero{
         display: none;
     }
@@ -149,6 +154,9 @@ header{
     font-weight: 600;
     color: #fff;
     transition: 0.2s ease;
+    @media only screen and (max-width: 601px){
+        font-size: 13px;
+    }
     &.active{
         color: #00b4ff;
     }
@@ -740,10 +748,7 @@ footer {
 .last-part{
     background: #171717;
     color: #fff;
-    padding: 0 0 100px 0;
-    @media only screen and (max-width: 601px){
-        padding: 0 0 50px 0!important;
-    }
+    padding: 50px 0;
     .container{
         display: flex;
         flex-direction: column;
@@ -754,6 +759,27 @@ footer {
     .section-title{
         font-size: 15px;
         margin: 0;
+    }
+}
+.contact-icons{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.svg-icon{
+    display: flex;
+    width: 100%;
+    max-width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: #000;
+    padding: 9px;
+    overflow: hidden;
+    svg{
+        fill: #fff;
+        height: fit-content;
+        width: fit-content;
     }
 }
 
