@@ -595,7 +595,7 @@ footer {
 ========================================= */
 
 .resume {
-    background: #fff;
+    background: #f7f7f7;
 }
 
 .resume-content {
@@ -688,7 +688,7 @@ footer {
 ========================================= */
 
 .blog {
-    background: #f7f7f7;
+    // background: #f7f7f7;
 }
 
 .blog-grid {
@@ -857,4 +857,79 @@ footer {
         gap: 0;
     }
 
+}
+
+.education{
+    background: #f7f7f7;
+    .section-heading{
+        margin-bottom: 20px;
+    }
+}
+
+.education-section .section-heading {
+    margin-bottom: 35px;
+}
+
+.education-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 30px;
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    border-radius: 16px;
+    background: var(--card-bg, transparent);
+}
+
+.education-icon {
+    width: 54px;
+    height: 54px;
+    min-width: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: rgba(128, 128, 128, 0.12);
+    font-size: 23px;
+}
+
+.education-date {
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+.education-content h3 {
+    margin: 8px 0;
+    font-size: 21px;
+    line-height: 1.4;
+}
+
+.education-content h4 {
+    margin: 0 0 12px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.education-content p {
+    line-height: 1.7;
+    opacity: 0.8;
+}
+
+.education-location {
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+@media (max-width: 600px) {
+    .education-section {
+        padding: 55px 0;
+    }
+
+    .education-card {
+        padding: 22px;
+        gap: 16px;
+    }
+
+    .education-content h3 {
+        font-size: 18px;
+    }
 }
